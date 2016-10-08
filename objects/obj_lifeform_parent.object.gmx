@@ -38,6 +38,7 @@ face = RIGHT;
 attacked = false;
 image_speed = 0;
 ultcharge = 0;
+equiped_melee = noone;
 hp = 3;
 </string>
           </argument>

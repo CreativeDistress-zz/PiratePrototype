@@ -36,6 +36,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -80,6 +81,9 @@
     </objects>
     <objects name="Damage Objects">
       <object>objects\obj_damage</object>
+    </objects>
+    <objects name="Weapons">
+      <object>objects\obj_weapon_parent</object>
     </objects>
   </objects>
   <rooms name="rooms">

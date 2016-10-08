@@ -39,19 +39,32 @@ image_speed = .3;
 if(len == 0) image_index = 0;
 
 switch (face){
+    
     case RIGHT:
       sprite_index = spr_player_right;
       break;
-        
+     
+    case UP_RIGHT:
+      break;
+     
+    case UP:
+      sprite_index = spr_player_up;
+      break;
+      
+    case UP_LEFT:
+      break;
+          
     case LEFT:
       sprite_index = spr_player_left;
       break;
       
-    case UP:
-      sprite_index = spr_player_up;
+    case DOWN_LEFT:
       break;
-        
+          
     case DOWN:
       sprite_index = spr_player_down;
+      break;
+      
+    case DOWN_RIGHT:
       break;
 }
