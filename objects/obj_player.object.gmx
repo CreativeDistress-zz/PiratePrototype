@@ -37,6 +37,14 @@ len = 0;
 face = RIGHT;
 attacked = false;
 image_speed = 0;
+
+equiped_melee = instance_create(x, y, obj_weapon_parent);
+equiped_melee.damage = 3;
+equiped_melee.upattack = spr_player_atk_up;
+equiped_melee.downattack = spr_player_atk_down;
+equiped_melee.rightattack = spr_player_atk_right;
+equiped_melee.leftattack = spr_player_atk_left;
+
 scr_get_input();
 state = scr_move_state;
 
