@@ -1,5 +1,5 @@
 ///scr_attack_state
-image_speed = .6;
+image_speed = .3;
 
 // Play the equiped weapons animation
 switch (sprite_index){

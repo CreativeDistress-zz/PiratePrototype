@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Contruction script
 event_inherited(); //call the parent constuction script
-spd = 3;
+spd = 1.5;
 hspd = 0;
 vspf = 0;
 xaxis = 0;
@@ -39,7 +39,7 @@ attacked = false;
 image_speed = 0;
 
 equiped_melee = instance_create(x, y, obj_weapon_parent);
-equiped_melee.damage = 3;
+equiped_melee.damage = 1;
 equiped_melee.upattack = spr_player_atk_up;
 equiped_melee.downattack = spr_player_atk_down;
 equiped_melee.rightattack = spr_player_atk_right;

@@ -77,7 +77,14 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>/// Damage all lifeforms
-if(other.id != creator){
+
+/*
+    If the object it hits does not equal its creator and the creator exists, do damage
+    We check to see if the creator exists before dealing damage so that way if the creator is
+    dying on the same frame it does damage, it wont creash the game.
+*/
+
+if(other.id != creator and instance_exists(creator)){
   
     other.hp -= damage;
     
@@ -114,9 +121,16 @@ if(other.id != creator){
           <argument>
             <kind>1</kind>
             <string>/// Damage the player
-if(other.id != creator){
-      
-      obj_player_stats.hp -= damage;
+
+/*
+    If the object it hits does not equal its creator and the creator exists, do damage
+    We check to see if the creator exists before dealing damage so that way if the creator is
+    dying on the same frame it does damage, it wont creash the game.
+*/
+
+if(other.id != creator and instance_exists(creator)){
+  
+    obj_player_stats.hp -= damage;
     
     //Apply Physics.
     var dir = point_direction(creator.x, creator.y, other.x, other.y);
