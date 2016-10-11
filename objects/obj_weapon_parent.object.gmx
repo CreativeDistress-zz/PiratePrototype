@@ -28,6 +28,7 @@
             <string>///Initilize the parent
    
 damage = 0;
+attack_speed = 0;
 upattack = noone;
 rightattack = noone;
 leftattack = noone;

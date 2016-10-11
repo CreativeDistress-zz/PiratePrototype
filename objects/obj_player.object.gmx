@@ -38,8 +38,10 @@ face = RIGHT;
 attacked = false;
 image_speed = 0;
 
+//created the weapon object for melee
 equiped_melee = instance_create(x, y, obj_weapon_parent);
 equiped_melee.damage = 1;
+equiped_melee.attack_speed = .3;
 equiped_melee.upattack = spr_player_atk_up;
 equiped_melee.downattack = spr_player_atk_down;
 equiped_melee.rightattack = spr_player_atk_right;
@@ -120,9 +122,9 @@ state =  scr_move_state;
           <argument>
             <kind>1</kind>
             <string>/// Move the player in the step event
-depth = -y; 
 
-// Check for death.
+event_inherited();
+
 if(obj_player_stats.hp &lt;= 0){
     instance_destroy();
 }
