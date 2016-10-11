@@ -1,5 +1,5 @@
 ///scr_attack_state
-image_speed = .6;
+image_speed = obj_player.equiped_melee.attack_speed;
 
 // Play the equiped weapons animation
 switch (sprite_index){

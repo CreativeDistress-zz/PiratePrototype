@@ -1,12 +1,12 @@
 ///scr_get_input
 
 //Check for keyboard input
-right_movement_input = keyboard_check(vk_right); 
-left_movement_input = keyboard_check(vk_left);  
-up_movement_input = keyboard_check(vk_up); ; 
-down_movement_input = keyboard_check(vk_down); 
-dash_key_input = keyboard_check_pressed(ord('C'));
-attack_key_input = keyboard_check_pressed(ord('X'));
+right_movement_input = keyboard_check(ord('D')); 
+left_movement_input = keyboard_check(ord('A'));  
+up_movement_input = keyboard_check(ord('W')); ; 
+down_movement_input = keyboard_check(ord('S')); 
+dash_key_input = keyboard_check_pressed(vk_space);
+attack_key_input = mouse_check_button_pressed(mb_left);
 
 // Get the axis
 xaxis = (right_movement_input - left_movement_input); 

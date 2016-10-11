@@ -6,7 +6,7 @@ if(dash_key_input){
         obj_player_stats.stamina--;
         state = scr_dash_state;
         alarm[0] = room_speed / 7;
-        alarm[1] = 60;
+        alarm[1] = 120;
     }
 }
 
@@ -35,7 +35,7 @@ phy_position_x += hspd;
 phy_position_y += vspd;
 
 // Control the sprite
-image_speed = .3;
+image_speed = .15;
 if(len == 0) image_index = 0;
 
 switch (face){

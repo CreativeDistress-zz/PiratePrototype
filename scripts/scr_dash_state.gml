@@ -2,7 +2,7 @@
 
 //If we are not moving, dash in the player forward direction
 if(len == 0){
-    dir = face * 90;
+    dir = face * 45;
 }
 
 len = spd * 4;
