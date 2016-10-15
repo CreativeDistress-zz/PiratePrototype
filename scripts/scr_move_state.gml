@@ -15,6 +15,22 @@ if(attack_key_input){
     state = scr_attack_state;
 }
 
+if(gun_mode_input){
+    
+    if(!instance_exists(obj_player_arms)){
+        instance_create(obj_player.x, obj_player.y, obj_player_arms);
+    }
+}
+
+if(gun_mode_stop){
+    
+    if(instance_exists(obj_player_arms)){
+        with(obj_player_arms){
+            instance_destroy();
+        }
+    }
+}
+
 // Get Direction
 dir = point_direction(0, 0, xaxis, yaxis);
 

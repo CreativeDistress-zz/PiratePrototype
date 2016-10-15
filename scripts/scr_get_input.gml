@@ -7,6 +7,8 @@ up_movement_input = keyboard_check(ord('W')); ;
 down_movement_input = keyboard_check(ord('S')); 
 dash_key_input = keyboard_check_pressed(vk_space);
 attack_key_input = mouse_check_button_pressed(mb_left);
+gun_mode_input = mouse_check_button_pressed(mb_right);
+gun_mode_stop = mouse_check_button_released(mb_right);
 
 // Get the axis
 xaxis = (right_movement_input - left_movement_input); 
@@ -19,6 +21,8 @@ if(gamepad_is_connected(0)){
     yaxis = gamepad_axis_value(0, gp_axislv);
     dash_key_input = gamepad_button_check_pressed(0, gp_face1);
     attack_key_input = gamepad_button_check_pressed(0, gp_face3);
+    gun_mode_input = gamepad_button_check_pressed(0, gp_shoulderlb);
+    gun_mode_stop =  gamepad_button_check_released(0, gp_shoulderlb);
 }
 
 
