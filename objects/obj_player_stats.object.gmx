@@ -104,8 +104,6 @@ draw_text(32, 64, "Stamina: " + string(stamina) + "/" + string(maxstamina));
 draw_text(32, 96, "Ultimate: " + string(ultcharge) + "/100");
 draw_text(32, 128, "Level: " + string(level));
 
-var angle = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y);
-draw_text(32, 200, "ANGLE: " + string(round(angle / 45)));
 
 </string>
           </argument>
