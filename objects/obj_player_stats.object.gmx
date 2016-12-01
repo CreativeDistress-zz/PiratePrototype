@@ -33,6 +33,14 @@ stamina = maxstamina;
 ultcharge = 0;
 level = 1;
 
+
+killCount = 0
+currentObjective = 0
+numberOfObjectives = 5
+for (var i = numberOfObjectives; i &gt; 0; i--)
+{
+    objectiveTracker[i] = 0;
+}
 </string>
           </argument>
         </arguments>
@@ -57,6 +65,7 @@ level = 1;
             <kind>1</kind>
             <string>/// Control the stats
 
+
 if(hp &lt; 0){
    hp = 0; 
 } else if (hp &gt; maxhp){
@@ -73,6 +82,12 @@ if(ultcharge &lt; 0){
     ultcharge = 0;
 } else if (ultcharge &gt; 100){
     ultcharge = 100;
+}
+
+if (killCount &gt;= 5 &amp;&amp; currentObjective == 0)
+{
+    objectiveTracker[currentObjective] = 1
+    currentObjective = 1
 }
 
 </string>
@@ -104,9 +119,23 @@ draw_text(32, 64, "Stamina: " + string(stamina) + "/" + string(maxstamina));
 draw_text(32, 96, "Ultimate: " + string(ultcharge) + "/100");
 draw_text(32, 128, "Level: " + string(level));
 
-var angle = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y);
-draw_text(32, 200, "ANGLE: " + string(round(angle / 45)));
+if instance_exists(obj_player)
+{
+    var angle = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y);
+}
+else
+{
+    var angle = 0;
+}
 
+draw_text(32, 200, "ANGLE: " + string(round(angle / 45)));
+draw_text(32, 250, "KILLS: " + string(killCount));
+draw_text(32, 300, "Objectives: " + string(objectiveTracker));
+draw_text(32, 350, "Current Objective: " + string(currentObjective));
+if (instance_exists(obj_player))
+{
+draw_text(32, 400, "Current Weapon: " + obj_player.currentWeapon);
+}
 </string>
           </argument>
         </arguments>

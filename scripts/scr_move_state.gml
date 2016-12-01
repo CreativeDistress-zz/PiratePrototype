@@ -10,9 +10,25 @@ if(dash_key_input){
     }
 }
 
-if(attack_key_input){
+if(attack_key_input && currentWeapon == "MELEE"){
     image_index = 0; //reset the image index to 0.
     state = scr_attack_state;
+}
+if (attack_key_input && currentWeapon == "RANGED")
+{
+    script_execute(scr_shoot_gun);
+}
+
+if (switch_weapons_key)
+{
+    if (currentWeapon == "MELEE")
+    {
+        currentWeapon = "RANGED";
+    }
+    else
+    {
+        currentWeapon = "MELEE";
+    }
 }
 
 // Get Direction

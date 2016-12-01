@@ -36,6 +36,9 @@ dir = 0;
 len = 0;
 face = RIGHT;
 attacked = false;
+
+currentWeapon = "MELEE"
+
 image_speed = 0;
 
 //created the weapon object for melee
@@ -125,6 +128,9 @@ state =  scr_move_state;
 
 event_inherited();
 
+
+depth = -y
+
 if(obj_player_stats.hp &lt;= 0){
     instance_destroy();
 }
@@ -183,7 +189,11 @@ if(state == scr_attack_state){
           <argument>
             <kind>1</kind>
             <string>///Draw Shadow
-draw_sprite(spr_player_shadow, image_index, x, y);
+if instance_exists(obj_player)
+{
+    draw_sprite(spr_player_shadow, image_index, x, y);
+}
+
 draw_self();
 </string>
           </argument>
